@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<h1>Profile Page {{user}}</h1>
+<a class="btn btn-warning btn-sm" href="{% url 'pass_change' %}"
+>Change Your Password</a
+>
+
+<h1>Profile Page {{user}}</h1>
+<a class="btn btn-warning btn-sm" href="{% url 'pass_change2' %}"
+>Change Your Password without old pass </a
+>
+{% if messages %}
+{% for m in messages %}
+<p class="bg-success p-3 text-white">{{m}}</p>
+{% endfor %}
+{% endif %}
+
+{% endblock content %}
